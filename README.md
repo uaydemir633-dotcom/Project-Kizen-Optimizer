@@ -1,6 +1,6 @@
 # 🚀 Project Kizen Optimizer
 
-![Version](https://img.shields.io/badge/version-1.3.0-brightgreen.svg)
+![Version](https://img.shields.io/badge/version-1.3.1-brightgreen.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-orange.svg)
 
@@ -17,19 +17,19 @@
 * 🖼️ **Icon Cache Rebuild:** Rebuilds corrupted Windows `IconCache.db` database files.
 * ⏱️ **Dynamic Runtime Logging:** Logs execution durations to `.txt` files to provide real-time estimated runtimes for future maintenance cycles.
 * 🛡️ **System Integrity Scans:** Automates DISM (`/RestoreHealth`, `/StartComponentCleanup`) and SFC (`/scannow`) repairs.
-* 🔒 **Automated Restore Point:** Creates a `Bakim_Oncesi_Yedek` System Restore Point before executing any repair routines.
+* 🔒 **Automated Restore Point:** Creates a `Kizen_Maintenance_RestorePoint` System Restore Point before executing any repair routines.
 
 ---
 
 ## 🛠️ Usage Instructions
 
-1. Download `kizen-optimizer-v1.3.0.bat` from the **Releases** tab.
-2. **Right-click** the file and select **"Run as administrator"** (Administrator privileges are required for system repair commands)[cite: 1, 2, 3, 4, 5].
-3. Select an operation mode from the interactive menu (1-4)[cite: 2, 3, 4, 5]:
+1. Download `kizen-optimizer-v1.3.1.bat` from the **Releases** tab.
+2. **Right-click** the file and select **"Run as administrator"** (Administrator privileges are required for system repair commands).
+3. Select an operation mode from the interactive menu (1-4):
    - **[1] Quick Cleanup:** Temp files, Browser Cache, GPU/DirectX Cache, Event Logs, Telemetry, Network Reset.
    - **[2] Deep Repair:** Restore Point, WER/Dumps, Delivery Optimization, Update Reset, DISM, SFC, Storage Optimization.
    - **[3] Full Maintenance:** Complete execution of Quick Cleanup & Deep Repair + Icon Cache Rebuild.
-   - **[4] Exit**[cite: 2, 3, 4, 5]
+   - **[4] Exit**
 
 ---
 
@@ -38,6 +38,7 @@
 ### 🟢 Released Features
 - [x] **v1.0.0 - v1.2.0:** Core maintenance routines, dynamic time logging, automated SSD/HDD detection, system restore point creation.
 - [x] **v1.3.0:** Full English localization, browser cache cleanup, WER/Minidump clearing, Delivery Optimization reset, Icon Cache rebuilding.
+- [x] **v1.3.1:** Stability improvements – fixed menu input reset, improved Windows Update reset (`net stop` instead of `taskkill`), PowerShell pipe escaping for reliable disk detection.
 
 ### 🟡 Planned Features (v1.4.0)
 - [ ] **Gaming & Latency Booster:** Standby List RAM flushing, Ultimate Performance power plan, TCP latency optimizations.
@@ -53,4 +54,4 @@
 
 ## ⚠️ Disclaimer & License
 
-This project is licensed under the **MIT License**. Use this script at your own discretion. It is recommended to keep System Protection enabled so the automatic Restore Point module can operate properly[cite: 1, 2, 3, 4, 5].
+This project is licensed under the **MIT License**. Use this script at your own discretion. It is recommended to keep System Protection enabled so the automatic Restore Point module can operate properly.
